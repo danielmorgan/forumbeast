@@ -26,6 +26,9 @@ $factory->define(App\Thread::class, function (Faker\Generator $faker) {
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\Reply::class, function (Faker\Generator $faker) {
     return [
+        'thread_id' => function () {
+            return factory('App\Thread')->create()->id;
+        },
         'user_id' => function () {
             return factory(App\User::class)->create()->id;
         },
