@@ -8,7 +8,7 @@
                     <div class="panel-heading">Forum Threads</div>
 
                     <div class="panel-body">
-                        @foreach ($threads as $thread)
+                        @foreach($threads as $thread)
                             <article>
                                 <h4>
                                     <a href="{{ route('threads.show', $thread) }}">{{ $thread->title }}</a>
